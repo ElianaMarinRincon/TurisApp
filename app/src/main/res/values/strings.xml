@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TurisApp</string>
+    <string name="main_txtEmail_hint">Introduzca su e-mail</string>
+    <string name="main_txtClave_hint">Intoduzca su contraseña</string>
+    <string name="main_btnIngreso_text">Ingresar</string>
+    <string name="main_btnRegistro_text">Registrarse</string>
+    <string name="main_txtNombre_text">TurisApp</string>
+</resources>
