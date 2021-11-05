@@ -7,7 +7,7 @@
     tools:context=".LoginActivity">
 
     <ImageView
-        android:id="@+id/main_imvLogo"
+        android:id="@+id/login_imvLogo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -16,7 +16,7 @@
         tools:layout_editor_absoluteX="140dp" />
 
     <EditText
-        android:id="@+id/main_txtEmail"
+        android:id="@+id/login_txtEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
@@ -27,10 +27,10 @@
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_imvLogo" />
+        app:layout_constraintTop_toBottomOf="@+id/login_imvLogo" />
 
     <EditText
-        android:id="@+id/main_txtClave"
+        android:id="@+id/login_txtClave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
@@ -41,10 +41,10 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_txtEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/login_txtEmail" />
 
     <Button
-        android:id="@+id/main_btnIngreso"
+        android:id="@+id/login_btnIngreso"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
@@ -55,10 +55,10 @@
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_txtClave" />
+        app:layout_constraintTop_toBottomOf="@+id/login_txtClave" />
 
     <Button
-        android:id="@+id/main_btnRegistro"
+        android:id="@+id/login_btnRegistro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
@@ -69,10 +69,10 @@
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_btnIngreso" />
+        app:layout_constraintTop_toBottomOf="@+id/login_btnIngreso" />
 
     <TextView
-        android:id="@+id/main_txtNombre"
+        android:id="@+id/login_txtNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
