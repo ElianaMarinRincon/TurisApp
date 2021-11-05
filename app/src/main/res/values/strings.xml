@@ -5,4 +5,8 @@
     <string name="main_btnIngreso_text">Ingresar</string>
     <string name="main_btnRegistro_text">Registrarse</string>
     <string name="main_txtNombre_text">TurisApp</string>
+    <string name="bienvenida_txtNombre_text">TurisApp</string>
+    <string name="bienvenida_txtEslogan_text">La App de turismo colombiano</string>
+    <string name="bienvenida_txtSaludo_text">Bienvenido, Welcome, Bienvenue, Accoglienza, Willkommen</string>
+    <string name="bienvenida_btnContinuar_text">Continuar</string>
 </resources>
