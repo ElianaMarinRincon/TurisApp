@@ -13,7 +13,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="90dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,24 +21,23 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="645dp"
             android:layout_margin="16dp"
             android:orientation="vertical">
 
-            <EditText
+            <TextView
                 android:id="@+id/formulario_txtPrimero"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
                 android:gravity="center"
-                android:inputType="textPersonName"
                 android:text="@string/formulario_txtPrimero_text"
-                android:textSize="14sp" />
+                android:textColor="#0C0000"
+                android:textSize="16sp" />
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/formulario_txtAvion"
                 android:layout_width="match_parent"
-                android:layout_height="213dp"
+                android:layout_height="234dp"
                 app:srcCompat="@drawable/avion" />
 
             <TextView
@@ -50,23 +49,19 @@
 
             <SearchView
                 android:layout_width="match_parent"
-                android:layout_height="38dp" />
+                android:layout_height="38dp"
+                android:orientation="vertical" />
 
-            <EditText
+            <TextView
                 android:id="@+id/formulario_txtSegundo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="textPersonName"
-                android:text="@string/formulario_txtSegundo_text"
-                android:textSize="14sp" />
+                android:text="@string/formulario_txtSegundo_text" />
 
             <ListView
                 android:layout_width="match_parent"
                 android:layout_height="248dp"
-                android:entries="@array/opcionesTuristicas">
-            </ListView>
+                android:entries="@array/opcionesTuristicas"></ListView>
 
             <TextView
                 android:id="@+id/formulario_txtPresupuesto"
@@ -81,13 +76,20 @@
                 android:entries="@array/presupuesto"
                 android:spinnerMode="dropdown" />
 
-            <Button
-                android:id="@+id/formulario_btnSiguiente"
-                android:layout_width="match_parent"
-                android:layout_height="53dp"
-                android:text="@string/formulario_btnSiguiente_text"
-                android:textAllCaps="false" />
-
         </LinearLayout>
+
     </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/formulario_btnSiguiente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:layout_marginBottom="21dp"
+        android:text="@string/formulario_btnSiguiente_text"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/formulario_CardView" />
 </androidx.constraintlayout.widget.ConstraintLayout>

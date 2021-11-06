@@ -30,7 +30,10 @@
                 android:id="@+id/comentarios_txtText1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/comentarios_txtTexto1_text" />
+                android:gravity="center"
+                android:text="@string/comentarios_txtTexto1_text"
+                android:textColor="#0E0000"
+                android:textSize="16sp" />
 
             <ScrollView
                 android:layout_width="match_parent"
@@ -126,6 +129,7 @@
         android:id="@+id/comentarios_btnFinalizar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:text="@string/comentarios_btnFinalizar"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
