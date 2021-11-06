@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="lugarResultado">
+        <item>Parque Tayrona</item>
+        <item>Piedra del Peñol</item>
+        <item>Monserrate</item>
+        <item>Parque Jaime Duque</item>
+        <item>Parque Simón Bolivar</item>
+    </string-array>
+</resources>

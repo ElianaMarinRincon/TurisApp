@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="opcionesTuristicas">
+        <item>Aventura</item>
+        <item>Ecológico</item>
+        <item>Familiar</item>
+        <item>Descanso</item>
+        <item>Gastronómico</item>
+    </string-array>
+</resources>

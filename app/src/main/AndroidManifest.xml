@@ -10,10 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TurisApp">
         <activity
+            android:name=".LugarResultado"
+            android:exported="false" />
+        <activity
+            android:name=".Formulario"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
             android:name=".Bienvenida"
+            android:exported="false" />
+        <activity
+            android:name=".ComentariosCalificacion"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

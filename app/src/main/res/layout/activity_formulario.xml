@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Formulario">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/formulario_CardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/formulario_txtPrimero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="textPersonName"
+                android:text="@string/formulario_txtPrimero_text"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="213dp"
+                app:srcCompat="@drawable/avion" />
+
+            <TextView
+                android:id="@+id/formulario_txtLugar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/formulario_txtLugar_hint"
+                android:text="@string/formulario_txtLugar_hint" />
+
+            <SearchView
+                android:layout_width="match_parent"
+                android:layout_height="38dp" />
+
+            <EditText
+                android:id="@+id/formulario_txtSegundo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="textPersonName"
+                android:text="@string/formulario_txtSegundo_text"
+                android:textSize="14sp" />
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="248dp"
+                android:entries="@array/opcionesTuristicas">
+            </ListView>
+
+            <TextView
+                android:id="@+id/formulario_txtPresupuesto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/formulario_txtPresupuesto_text" />
+
+            <Spinner
+                android:id="@+id/formulario_spnPresupuesto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/presupuesto"
+                android:spinnerMode="dropdown" />
+
+            <Button
+                android:id="@+id/formulario_btnSiguiente"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:text="@string/formulario_btnSiguiente_text"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,4 +9,19 @@
     <string name="bienvenida_txtEslogan_text">La App de turismo colombiano</string>
     <string name="bienvenida_txtSaludo_text">Bienvenido, Welcome, Bienvenue, Accoglienza, Willkommen</string>
     <string name="bienvenida_btnContinuar_text">Continuar</string>
+    <string name="formulario_txtPrimero_text">Encuentra el lugar ideal para tu proxima aventura</string>
+    <string name="formulario_txtLugar_hint">Ingresa el lugar que deseas visitar</string>
+    <string name="formulario_txtPresupuesto_text">Selecciona el presupuesto</string>
+    <string name="formulario_txtSegundo_text">Selecciona el tipo de turismo que deseas realizar</string>
+    <string name="formulario_btnSiguiente_text">Siguente</string>
+    <string name="resultado_txtTexto1_text">A continuación te recomendamos los siguientes lugares, elije uno y encontraras mayor información</string>
+    <string name="resultado_txtDescripcionLugar_text">Aquí van los comentarios del lugar que elija el usuario</string>
+    <string name="resultado_btnAtras_text">Atras</string>
+    <string name="resultado_btnSiguiente_text">Siguiente</string>
+    <string name="comentarios_txtTexto1_text">Estos son los comentarios y calificaciones de otros viajeros</string>
+    <string name="comnetarios_txtPregunta_text">¿Visitaste este lugar?</string>
+    <string name="comentarios_btnRespuesta_text">Sí</string>
+    <string name="comentarios_txtTituloComentar_text">Comenta y califica tu experiencia</string>
+    <string name="comentarios_txtComentarioUsuario"></string>
+    <string name="comentarios_btnFinalizar">Finalizar</string>
 </resources>
