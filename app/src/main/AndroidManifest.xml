@@ -10,13 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TurisApp">
         <activity
-            android:name=".Formulario"
-            android:exported="false" />
-        <activity
             android:name=".Bienvenida"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Formulario"
             android:exported="false" />
         <activity
             android:name=".LugarResultado"
