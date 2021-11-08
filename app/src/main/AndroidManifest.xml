@@ -23,7 +23,8 @@
             android:exported="false" />
         <activity
             android:name=".ComentariosCalificacion"
-            android:exported="true">
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan|adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

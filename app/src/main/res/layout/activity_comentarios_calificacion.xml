@@ -101,7 +101,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal">
 
             <TextView
                 android:id="@+id/comentarios_txtTituloComentar"
@@ -119,8 +120,11 @@
 
             <RatingBar
                 android:id="@+id/comentarios_rbCalificacion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:numStars="5"
+                android:rating="2" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
