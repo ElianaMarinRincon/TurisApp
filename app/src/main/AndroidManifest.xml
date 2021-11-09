@@ -13,7 +13,10 @@
             android:name=".Bienvenida"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".ComentariosCalificacion"
+            android:exported="false" />
+        <activity
+            android:name=".RegistroActivity"
             android:exported="false" />
         <activity
             android:name=".Formulario"
@@ -22,7 +25,7 @@
             android:name=".LugarResultado"
             android:exported="false" />
         <activity
-            android:name=".ComentariosCalificacion"
+            android:name=".LoginActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustPan|adjustResize">
             <intent-filter>
