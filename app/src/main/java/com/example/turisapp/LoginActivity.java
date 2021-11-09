@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
                 if(email.isEmpty() || clave.isEmpty()){
                     AlertDialog.Builder mensaje = new AlertDialog.Builder(view.getContext());
                     mensaje.setTitle("No se puede ingresar");
-                    mensaje.setMessage("Por favor diligencia los campos de ingreso o registrate");
+                    mensaje.setMessage("Por favor diligencia los campos de ingreso o regístrate");
                     mensaje.create();
                     mensaje.show();
                 }
