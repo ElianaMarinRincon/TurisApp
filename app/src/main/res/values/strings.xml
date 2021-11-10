@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">TurisApp</string>
-    <string name="main_txtEmail_hint">Introduzca su e-mail</string>
-    <string name="main_txtClave_hint">Intoduzca su contraseña</string>
-    <string name="main_btnIngreso_text">Ingresar</string>
-    <string name="main_btnRegistro_text">Registrarse</string>
-    <string name="main_txtNombre_text">TurisApp</string>
+    <string name="login_txtEmail_hint">Introduce tu e-mail</string>
+    <string name="login_txtClave_hint">Introduce tu contraseña</string>
+    <string name="login_btnIngreso_text">Ingresar</string>
+    <string name="login_btnRegistro_text">Registrarte</string>
+    <string name="login_txtNombre_text">TurisApp</string>
     <string name="bienvenida_txtNombre_text">TurisApp</string>
     <string name="bienvenida_txtEslogan_text">La App de turismo colombiano</string>
     <string name="bienvenida_txtSaludo_text">Bienvenido, Welcome, Bienvenue, Accoglienza, Willkommen</string>
@@ -23,12 +23,13 @@
     <string name="comentarios_btnRespuesta_text">Sí</string>
     <string name="comentarios_txtTituloComentar_text">Comenta y califica tu experiencia</string>
     <string name="comentarios_txtComentarioUsuario"></string>
+    <string name="comentarios_btnAtras">Atras</string>
     <string name="comentarios_btnFinalizar">Finalizar</string>
-    <string name="registro_txtNombres_hint">Introduzca su nombre</string>
-    <string name="registro_txtApellidos_hint">Introduzca sus Apellidos</string>
-    <string name="registro_dateFechaNacimiento_hint">Introduzca su fecha de nacimiento</string>
-    <string name="registro_emailCorreo_hint">Introduzca su correo</string>
-    <string name="registro_pswClave_hint">Introduzca una contraseña de mínimo seis caracteres</string>
+    <string name="registro_txtNombres_hint">Introduce tu nombre</string>
+    <string name="registro_txtApellidos_hint">Introduce tus Apellidos</string>
+    <string name="registro_dateFechaNacimiento_hint">Introduce tu fecha de nacimiento</string>
+    <string name="registro_emailCorreo_hint">Introduce tu correo</string>
+    <string name="registro_pswClave_hint">Introduce una contraseña de mínimo seis caracteres</string>
     <string name="registro_btnGuardar_text">Guardar</string>
     <string name="registro_btnVolver_text">Volver</string>
 </resources>

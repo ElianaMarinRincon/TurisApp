@@ -13,7 +13,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="430dp"
+        android:layout_marginBottom="380dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -37,7 +37,7 @@
 
             <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="273dp">
+                android:layout_height="318dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -54,7 +54,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="350dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="400dp"
         app:layout_constraintBottom_toTopOf="@+id/cardView2"
@@ -66,7 +66,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="horizontal">
 
             <TextView
@@ -90,9 +90,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="400dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="95dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -101,8 +101,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_gravity="center_horizontal">
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/comentarios_txtTituloComentar"
@@ -113,7 +113,7 @@
             <EditText
                 android:id="@+id/comentarios_txtComentarioUsuario"
                 android:layout_width="match_parent"
-                android:layout_height="169dp"
+                android:layout_height="206dp"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:text="@string/comentarios_txtComentarioUsuario" />
@@ -128,16 +128,36 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <Button
-        android:id="@+id/comentarios_btnFinalizar"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="@string/comentarios_btnFinalizar"
-        android:textAllCaps="false"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView4" />
+        app:layout_constraintTop_toBottomOf="@+id/cardView4"
+        app:layout_constraintVertical_bias="1.0">
+
+        <Button
+            android:id="@+id/comentarios_btnFinalizar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="30dp"
+            android:text="@string/comentarios_btnFinalizar"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/comentarios_btnAtras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="30dp"
+            android:text="@string/comentarios_btnAtras"
+            android:textAllCaps="false" />
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
