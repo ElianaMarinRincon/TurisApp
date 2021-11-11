@@ -25,5 +25,11 @@ public class Formulario extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        Button btnAtras = (Button) findViewById(R.id.formulario_btnAtras);
+        btnAtras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {onBackPressed();}
+        });
     }
 }

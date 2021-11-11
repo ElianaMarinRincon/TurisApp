@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.misiontic.myapplication.MainActivity">
+
+
+    <item
+        android:id="@+id/menuPpalPerfil_BuscarSitiosTuristicos"
+        android:icon="@android:drawable/btn_plus"
+        android:title="@string/menuPpalPerfil_BuscarSitiosTuristicos" />
+    <item
+        android:id="@+id/menuPpalPerfil_SitiosVisitados"
+        android:icon="@android:drawable/ic_dialog_map"
+        android:title="@string/menuPpalPerfil_SitiosVisitados" />
+    <item
+        android:id="@+id/menuPpalPerfil_CerrarSesion"
+        android:icon="@android:drawable/ic_lock_power_off"
+        android:title="@string/menuPpalPerfil_CerrarSesion" />
+</menu>

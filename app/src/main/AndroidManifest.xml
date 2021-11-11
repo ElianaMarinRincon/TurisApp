@@ -10,27 +10,34 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TurisApp">
         <activity
-            android:name=".Bienvenida"
-            android:exported="false"
-            android:windowSoftInputMode="adjustPan|adjustResize"/>
+            android:name=".LoginActivity"
+            android:exported="false" />
         <activity
-            android:name=".ComentariosCalificacion"
+            android:name=".PerfilActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan|adjustResize"/>
+            android:windowSoftInputMode="adjustPan|adjustResize" />
         <activity
-            android:name=".RegistroActivity"
+            android:name=".Formulario"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan|adjustResize"/>
+            android:windowSoftInputMode="adjustPan|adjustResize" />
         <activity
             android:name=".LugarResultado"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan|adjustResize"/>
+            android:windowSoftInputMode="adjustPan|adjustResize" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".ComentariosCalificacion"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan|adjustResize"/>
+            android:windowSoftInputMode="adjustPan|adjustResize" />
         <activity
-            android:name=".Formulario"
+            android:name=".RegistroActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".LugaresVisitadosActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".Bienvenida"
             android:exported="true"
             android:windowSoftInputMode="adjustPan|adjustResize">
             <intent-filter>

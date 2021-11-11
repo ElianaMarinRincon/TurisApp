@@ -13,6 +13,7 @@
     <string name="formulario_txtLugar_hint">Ingresa el lugar que deseas visitar</string>
     <string name="formulario_txtPresupuesto_text">Selecciona el presupuesto</string>
     <string name="formulario_txtSegundo_text">Selecciona el tipo de turismo que deseas realizar</string>
+    <string name="formulario_btnAtras_text">Atras</string>
     <string name="formulario_btnSiguiente_text">Siguente</string>
     <string name="resultado_txtTexto1_text">A continuación te recomendamos los siguientes lugares, elije uno y encontraras mayor información</string>
     <string name="resultado_txtDescripcionLugar_text">Aquí van los comentarios del lugar que elija el usuario</string>
@@ -32,4 +33,10 @@
     <string name="registro_pswClave_hint">Introduce una contraseña de mínimo seis caracteres</string>
     <string name="registro_btnGuardar_text">Guardar</string>
     <string name="registro_btnVolver_text">Volver</string>
+    <string name="menuPpalPerfil_BuscarSitiosTuristicos">Buscar sitios turísticos</string>
+    <string name="menuPpalPerfil_SitiosVisitados">Ver mis sitios visitados</string>
+    <string name="menuPpalPerfil_CerrarSesion">Cerrar sesión</string>
+    <string name="perfil_txtBienvenido_text">¡Bienvenido!</string>
+    <string name="lugaresvisitados_txtTitulo_text">Has visitado los siguientes lugares</string>
+    <string name="lugaresvisitados_btnAtras_text">Atras</string>
 </resources>

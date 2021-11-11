@@ -3,6 +3,7 @@ package com.example.turisapp;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -33,17 +34,24 @@ public class LoginActivity extends AppCompatActivity {
                     mensaje.create();
                     mensaje.show();
                 }
+
+                else {
+
+                    Intent i = new Intent(view.getContext(), PerfilActivity.class);
+                    startActivity(i);
+                }
             }
         });
 
         Button btnRegistrarse = (Button) findViewById(R.id.login_btnRegistro);
-
         btnRegistrarse.setOnClickListener(new View.OnClickListener() {
-            @Override
+
+            //@Override
             public void onClick(View view) {
                 Intent i = new Intent(view.getContext(), RegistroActivity.class);
                 startActivity(i);
             }
         });
+
     }
 }
