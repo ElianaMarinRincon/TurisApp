@@ -36,7 +36,6 @@ public class LoginActivity extends AppCompatActivity {
                 }
 
                 else {
-
                     Intent i = new Intent(view.getContext(), PerfilActivity.class);
                     startActivity(i);
                 }

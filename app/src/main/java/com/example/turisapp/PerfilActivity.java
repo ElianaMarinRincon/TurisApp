@@ -36,7 +36,7 @@ public class PerfilActivity<onCreateOptionsMenu> extends AppCompatActivity {
         btnAcercaDe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(view.getContext(), "TurisApp es una aplicación creada por Diana Vanessa Becerra Alfonso, Eliana Marían Rincón y Alberto Vesga Guarín para la busqueda de sitios turísticos en Colombia", Toast.LENGTH_LONG).show();
+                Toast.makeText(view.getContext(), "TurisApp es una aplicación creada por Diana Vanessa Becerra Alfonso, Eliana Marín Rincón y Alberto Vesga Guarín para la busqueda de sitios turísticos en Colombia", Toast.LENGTH_LONG).show();
             }
         });
 
