@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import androidx.annotation.Nullable;
 
+import com.example.turisapp.RegistroActivity;
 import com.example.turisapp.modelos.usuario;
 
 import java.util.ArrayList;
@@ -71,7 +72,6 @@ public class UsuarioADO extends SqliteConex{
 
         return registros;
     }
-
 
 
 }

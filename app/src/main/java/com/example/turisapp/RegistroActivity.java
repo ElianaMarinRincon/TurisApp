@@ -48,6 +48,14 @@ public class RegistroActivity extends AppCompatActivity {
                     mensaje.show();
                 }
 
+                if (clave.length()<6){
+                    AlertDialog.Builder mensaje = new AlertDialog.Builder(view.getContext());
+                    mensaje.setTitle("Error");
+                    mensaje.setMessage("Por favor ingresa una contraseña de 6 o más caracteres");
+                    mensaje.create();
+                    mensaje.show();
+                }
+
                 else{
                     Intent i = new Intent(view.getContext(), PerfilActivity.class);
                     startActivity(i);
@@ -56,4 +64,16 @@ public class RegistroActivity extends AppCompatActivity {
             }
         });
     }
+
+    public static boolean validacionClave (String clave)
+    {
+        boolean validacion = false;
+
+        if ((clave.length()>=6))
+            validacion = true;
+
+        return validacion;
+    }
+
+
 }
