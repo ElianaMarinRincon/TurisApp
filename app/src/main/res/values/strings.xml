@@ -30,7 +30,7 @@
     <string name="registro_txtApellidos_hint">Introduce tus Apellidos</string>
     <string name="registro_dateFechaNacimiento_hint">Introduce tu fecha de nacimiento</string>
     <string name="registro_emailCorreo_hint">Introduce tu correo</string>
-    <string name="registro_pswClave_hint">Introduce una contraseña de mínimo seis caracteres</string>
+    <string name="registro_pswClave_hint">Introduce una contraseña de mínimo 6 caracteres</string>
     <string name="registro_btnGuardar_text">Guardar</string>
     <string name="registro_btnVolver_text">Volver</string>
     <string name="menuPpalPerfil_BuscarSitiosTuristicos">Buscar sitios turísticos</string>
