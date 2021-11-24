@@ -113,7 +113,7 @@
             <EditText
                 android:id="@+id/comentarios_txtComentarioUsuario"
                 android:layout_width="match_parent"
-                android:layout_height="206dp"
+                android:layout_height="170dp"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:text="@string/comentarios_txtComentarioUsuario" />
@@ -130,8 +130,9 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="650dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"

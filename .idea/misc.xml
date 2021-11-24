@@ -6,15 +6,26 @@
         <entry key="..\:/Users/usuario/AndroidStudioProjects/TurisApp/app/src/main/res/drawable/ic_logo_turisapp.xml" value="0.2203125" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/TurisApp/app/src/main/res/layout/activity_bienvenida.xml" value="0.25" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/TurisApp/app/src/main/res/layout/activity_comentarios_calificacion.xml" value="0.2" />
-        <entry key="..\:/Users/usuario/AndroidStudioProjects/TurisApp/app/src/main/res/layout/activity_formulario.xml" value="0.22" />
+        <entry key="..\:/Users/usuario/AndroidStudioProjects/TurisApp/app/src/main/res/layout/activity_formulario.xml" value="0.33" />
+        <entry key="..\:/Users/usuario/AndroidStudioProjects/TurisApp/app/src/main/res/layout/activity_fragmento1_lugar_resultado.xml" value="0.1743659420289855" />
+        <entry key="..\:/Users/usuario/AndroidStudioProjects/TurisApp/app/src/main/res/layout/activity_insertar_lugares.xml" value="0.33" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/TurisApp/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/TurisApp/app/src/main/res/layout/activity_lugar_resultado.xml" value="0.2" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/TurisApp/app/src/main/res/layout/activity_lugares_visitados.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/TurisApp/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/usuario/AndroidStudioProjects/TurisApp/app/src/main/res/layout/activity_mapa_lugar_resultado.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/TurisApp/app/src/main/res/layout/activity_menu.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/TurisApp/app/src/main/res/layout/activity_perfil.xml" value="0.18" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/TurisApp/app/src/main/res/layout/activity_registro.xml" value="0.25" />
+        <entry key="..\:/Users/usuario/AndroidStudioProjects/TurisApp/app/src/main/res/layout/fragment_fragmento1__lugar_resultado.xml" value="0.22" />
+        <entry key="..\:/Users/usuario/AndroidStudioProjects/TurisApp/app/src/main/res/layout/fragment_fragmento2__lugar_resultado.xml" value="0.1743659420289855" />
+        <entry key="..\:/Users/usuario/AndroidStudioProjects/TurisApp/app/src/main/res/layout/fragment_fragmento2__lugar_resultado__mapa.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/usuario/AndroidStudioProjects/TurisApp/app/src/main/res/layout/fragment_fragmento3__lugar_resultado.xml" value="0.33" />
+        <entry key="..\:/Users/usuario/AndroidStudioProjects/TurisApp/app/src/main/res/layout/listView_lugar_resultado.xml" value="0.12273550724637682" />
+        <entry key="..\:/Users/usuario/AndroidStudioProjects/TurisApp/app/src/main/res/layout/list_lugar_resultado.xml" value="0.12273550724637682" />
+        <entry key="..\:/Users/usuario/AndroidStudioProjects/TurisApp/app/src/main/res/layout/list_view_lugar_resultado.xml" value="0.11684782608695653" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/TurisApp/app/src/main/res/layout/main_fragment.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/usuario/AndroidStudioProjects/TurisApp/app/src/main/res/layout/recyclerview_lugar_resultado.xml" value="0.5" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/TurisApp/app/src/main/res/menu/menuPpalPerfil.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/TurisApp/app/src/main/res/menu/menu_ppal_perfil.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/TurisApp/app/src/main/res/menu/menu_principal_perfil.xml" value="0.25" />

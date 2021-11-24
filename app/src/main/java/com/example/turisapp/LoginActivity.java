@@ -52,5 +52,14 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        Button btnRegistroLugares = (Button) findViewById(R.id.login_btnRegistrarLugares);
+        btnRegistroLugares.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(view.getContext(), InsertarLugaresActivity.class);
+                startActivity(i);
+            }
+        });
+
     }
 }

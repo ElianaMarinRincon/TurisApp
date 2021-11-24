@@ -6,26 +6,26 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
-public class SqliteConex extends SQLiteOpenHelper {
+public class SqliteConexLugares extends SQLiteOpenHelper {
 
     private static final String nombre_bd = "turisapp.db";
 
-    public SqliteConex(@Nullable Context c)
+    public SqliteConexLugares(@Nullable Context c)
     {
         super(c, nombre_bd, null, 2);
 
     }
 
+
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL("CREATE TABLE usuarios (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombres TEXT NOT NULL, apellidos TEXT NOT NULL, fechaNacimiento TEXT NOT NULL, correo	TEXT NOT NULL, contraseña TEXT NOT NULL, comentarios TEXT, lugaresVisitados TEXT FOREING KEY);");
+        sqLiteDatabase.execSQL("CREATE TABLE lugares (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre TEXT NOT NULL, departamento TEXT NOT NULL, municipio TEXT NOT NULL, latitud TEXT NOT NULL, longitud TEXT NOT NULL, tipo INT NOT NULL, presupuesto INT NOT NULL, comentarios TEXT NOT NULL);");
 
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-        sqLiteDatabase.execSQL("DROP TABLE usuarios");
+        sqLiteDatabase.execSQL("DROP TABLE lugares");
     }
-
 
 }

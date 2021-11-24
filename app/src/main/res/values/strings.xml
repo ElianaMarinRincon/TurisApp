@@ -5,6 +5,7 @@
     <string name="login_btnIngreso_text">Ingresar</string>
     <string name="login_btnRegistro_text">Registrarte</string>
     <string name="login_txtNombre_text">TurisApp</string>
+    <string name="login_btnRegistrarLugares_text">Registrar sitios turísticos</string>
     <string name="bienvenida_txtNombre_text">TurisApp</string>
     <string name="bienvenida_txtEslogan_text">La App de turismo colombiano</string>
     <string name="bienvenida_txtSaludo_text">Bienvenido, Welcome, Bienvenue, Accoglienza, Willkommen</string>
@@ -15,8 +16,6 @@
     <string name="formulario_txtSegundo_text">Selecciona el tipo de turismo que deseas realizar</string>
     <string name="formulario_btnAtras_text">Atras</string>
     <string name="formulario_btnSiguiente_text">Siguente</string>
-    <string name="resultado_txtTexto1_text">A continuación te recomendamos los siguientes lugares, elije uno y encontraras mayor información</string>
-    <string name="resultado_txtDescripcionLugar_text">Aquí van los comentarios del lugar que elija el usuario</string>
     <string name="resultado_btnAtras_text">Atras</string>
     <string name="resultado_btnSiguiente_text">Siguiente</string>
     <string name="comentarios_txtTexto1_text">Estos son los comentarios y calificaciones de otros viajeros</string>
@@ -39,4 +38,26 @@
     <string name="perfil_txtBienvenido_text">¡Bienvenido!</string>
     <string name="lugaresvisitados_txtTitulo_text">Has visitado los siguientes lugares</string>
     <string name="lugaresvisitados_btnAtras_text">Atras</string>
+    <string name="fragmento1_lugar_txtTitulo">A continuación te recomendamos los siguientes lugares, elije uno y encontraras mayor información</string>
+    <string name="fragmento3_lugar_txtTituloDepartamento_text">Departamento</string>
+    <string name="fragmento3_lugar_txtDepartamento_text"></string>
+    <string name="fragmento3_lugar_txtTituloMunicipio_text">Municipio</string>
+    <string name="fragmento3_lugar_txtMunicipio_text"></string>
+    <string name="fragmento3_lugar_txtTituloTipo_text">Tipo de turismo</string>
+    <string name="fragmento3_lugar_txtTipo_text"></string>
+    <string name="fragmento3_lugar_txtTituloPresupuesto_text">Presupuesto</string>
+    <string name="fragmento3_lugar_txtPresupuesto_text"></string>
+    <string name="fragmento3_lugar_txtTituloComentarios_text">Comentarios generales</string>
+    <string name="fragmento3_lugar_txtComentarios_text"></string>
+    <string name="fragmento2_lugar_txtComentariosLugar">Aquí van los comentarios del lugar que elija el usuario</string>
+    <string name="insertarLugares_txtTitulo_text">Registro de sitios turísticos</string>
+    <string name="insertarLugares_txtNombre_text">Ingrese el nombre del sitio turístico</string>
+    <string name="insertarLugares_txtDepto_text">Ingrese el departamento del sitio turístico</string>
+    <string name="insertarLugares_txtMunicipio_text">Ingrese el municipio del sitio turístico</string>
+    <string name="insertarLugares_txtLatitud_text">Ingrese la latitud del sitio turístico</string>
+    <string name="insertarLugares_txtLongitud_text">Ingrese la longitud del sitio turístico</string>
+    <string name="insertarLugares_txtComentarios_text">Ingrese comentarios generales del sitio turístico</string>
+    <string name="insertarLugares_btnAtras_text">Atras</string>
+    <string name="insertarLugares_btnGuardar_text">Guardar</string>
+    <string name="textview">TextView</string>
 </resources>

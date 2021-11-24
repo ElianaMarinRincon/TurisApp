@@ -49,6 +49,36 @@ public class UsuarioADO extends SqliteConex{
         return id;
     }
 
+    public usuario obtenerUsuario(long id)
+    {
+        usuario us = null;
+
+        SqliteConex conexion = new SqliteConex(this.contexto);
+        SQLiteDatabase db = conexion.getWritableDatabase();
+
+        try
+        {
+            Cursor cregistros = db.rawQuery("select id, nombres, apellidos, fchaNacimiento, email, clave from usuarios where id = " + String.valueOf(id), null);
+            cregistros.moveToFirst();
+            us = new usuario();
+            us.setId(cregistros.getInt(0));
+            us.setNombres(cregistros.getString(1));
+            us.setApellidos(cregistros.getString(2));
+            us.setFechaNacimiento(cregistros.getString(3));
+            us.setCorreo(cregistros.getString(4));
+            us.setClave(cregistros.getString(5));
+
+        }
+        catch (Exception ex)
+        {
+
+        }
+        finally {
+            db.close();
+        }
+        return us;
+    }
+
     public ArrayList<usuario> listar()
     {
         SqliteConex conexion = new SqliteConex(this.contexto);
@@ -71,6 +101,60 @@ public class UsuarioADO extends SqliteConex{
             }while (cregistros.moveToNext());
 
         return registros;
+    }
+
+    public boolean editar(usuario us)
+    {
+        boolean editado = false;
+
+        SqliteConex conexion = new SqliteConex(this.contexto);
+        SQLiteDatabase db = conexion.getWritableDatabase();
+        try
+        {
+
+            db.execSQL("UPDATE usuarios" +
+                    "   SET nombres = '" + us.getNombres() + "'," +
+                    "       apellidos = '" + us.getApellidos() + "'," +
+                    "       fechaNacimento = '" + us.getFechaNacimiento() + "'," +
+                    "       email = '" + us.getCorreo() + "'," +
+                    "       clave = '" + us.getClave() + "'" +
+                    " WHERE id = '" + String.valueOf(us.getId()) + "'");
+            editado=true;
+
+        }
+        catch (Exception ex)
+        {
+
+        }
+        finally {
+            db.close();
+        }
+
+        return editado;
+    }
+
+    public boolean eliminar(long id)
+    {
+        boolean eliminado = false;
+
+        SqliteConex conexion = new SqliteConex(this.contexto);
+        SQLiteDatabase db = conexion.getWritableDatabase();
+
+        try
+        {
+            db.execSQL("DELETE FROM usuarios\n" +
+                    "      WHERE id = '" + String.valueOf(id) + "'");
+            eliminado=true;
+        }
+        catch (Exception ex)
+        {
+
+        }
+        finally {
+            db.close();
+        }
+
+        return eliminado;
     }
 
 

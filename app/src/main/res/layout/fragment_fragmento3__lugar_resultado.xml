@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragmento3_LugarResultado">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/fragmento3_lugar_txtTituloDepartamento"
+                android:layout_width="5dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/fragmento3_lugar_txtTituloDepartamento_text"
+                android:textColor="#0C0C0C" />
+
+            <TextView
+                android:id="@+id/fragmento3_lugar_txtDepartamento"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/fragmento3_lugar_txtDepartamento_text"
+                android:textColor="#070707" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/fragmento3_lugar_txtTituloMunicipio"
+                android:layout_width="5dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/fragmento3_lugar_txtTituloMunicipio_text"
+                android:textColor="#040404" />
+
+            <TextView
+                android:id="@+id/fragmento3_lugar_txtMunicipio"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/fragmento3_lugar_txtMunicipio_text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/fragmento3_lugar_txtTituloTipo"
+                android:layout_width="5dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/fragmento3_lugar_txtTituloTipo_text"
+                android:textColor="#070707" />
+
+            <TextView
+                android:id="@+id/fragmento3_lugar_txtTipo"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/fragmento3_lugar_txtTipo_text"
+                android:textColor="#050505" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/fragmento3_lugar_txtTituloPresupuesto"
+                android:layout_width="5dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/fragmento3_lugar_txtTituloPresupuesto_text"
+                android:textColor="#0B0B0B" />
+
+            <TextView
+                android:id="@+id/fragmento3_lugar_txtPresupuesto"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/fragmento3_lugar_txtPresupuesto_text"
+                android:textColor="#090909" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/fragmento3_lugar_txtTituloComentarios"
+                android:layout_width="5dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/fragmento3_lugar_txtTituloComentarios_text"
+                android:textColor="#090909" />
+
+            <TextView
+                android:id="@+id/fragmento3_lugar_txtComentarios"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/fragmento3_lugar_txtComentarios_text"
+                android:textColor="#090909" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
