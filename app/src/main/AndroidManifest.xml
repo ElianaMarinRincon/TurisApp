@@ -12,7 +12,6 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.SEND_SMS" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -34,7 +33,7 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".InsertarLugaresActivity"
+            android:name=".LugarResultado"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
@@ -48,7 +47,7 @@
             android:exported="false"
             android:windowSoftInputMode="adjustPan|adjustResize" />
         <activity
-            android:name=".LugarResultado"
+            android:name=".InsertarLugaresActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustPan|adjustResize" />
         <activity

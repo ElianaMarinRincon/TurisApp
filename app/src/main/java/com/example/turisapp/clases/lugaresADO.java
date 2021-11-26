@@ -16,8 +16,7 @@ public class lugaresADO extends SqliteConexLugares {
 
     private Context contexto;
 
-    public lugaresADO(@Nullable Context c)
-    {
+    public lugaresADO(@Nullable Context c) {
         super(c);
         this.contexto = c;
     }
@@ -26,11 +25,11 @@ public class lugaresADO extends SqliteConexLugares {
     {
         long id = 0;
 
+        SqliteConexLugares dbc = new SqliteConexLugares(this.contexto);
+        SQLiteDatabase db = dbc.getWritableDatabase();
+
         try
         {
-            SqliteConex dbc = new SqliteConex(this.contexto);
-            SQLiteDatabase db = dbc.getWritableDatabase();
-
             ContentValues valores = new ContentValues();
             valores.put("nombre", lug.getNombre());
             valores.put("departamento", lug.getDepartamento());
@@ -46,22 +45,26 @@ public class lugaresADO extends SqliteConexLugares {
 
         catch (Exception ex)
         {
+            System.out.println(ex.getMessage());
+        }
 
+        finally {
+            db.close();
         }
 
         return id;
     }
 
-    public lugares obtenerlugar (long id)
+    public lugares obtenerLugar (long id)
     {
         lugares lug = null;
 
-        SqliteConex conexion = new SqliteConex(this.contexto);
+        SqliteConexLugares conexion = new SqliteConexLugares(this.contexto);
         SQLiteDatabase db = conexion.getWritableDatabase();
 
         try
         {
-            Cursor cregistros = db.rawQuery("select id, nombre, departamento, municipio, latitud, longitud, tipo, presupuesto from lugares where id = " + String.valueOf(id), null);
+            Cursor cregistros = db.rawQuery("select id, nombre, departamento, municipio, latitud, longitud, tipo, presupuesto, comentarios from lugares where id = " + String.valueOf(id), null);
             cregistros.moveToFirst();
             lug = new lugares();
             lug.setId(cregistros.getInt(0));
@@ -73,7 +76,44 @@ public class lugaresADO extends SqliteConexLugares {
             lug.setTipo(cregistros.getInt(6));
             lug.setPresupuesto(cregistros.getInt(7));
             lug.setComentarios(cregistros.getString(8));
+        }
 
+        catch (Exception ex)
+        {
+
+        }
+
+        finally {
+            db.close();
+        }
+
+        return lug;
+    }
+
+    public ArrayList <lugares> listar()
+    {
+        ArrayList <lugares> registros = new ArrayList<>();
+        SqliteConexLugares conexion = new SqliteConexLugares(this.contexto);
+        SQLiteDatabase db = conexion.getWritableDatabase();
+
+        try{
+            Cursor cregistros = db.rawQuery("select id, nombre, departamento, municipio, latitud, longitud, tipo, presupuesto, comentarios from lugares", null);
+
+            if (cregistros.moveToFirst())
+                do{
+                    lugares lug = new lugares();
+                    lug.setId(cregistros.getInt(0));
+                    lug.setNombre(cregistros.getString(1));
+                    lug.setDepartamento(cregistros.getString(2));
+                    lug.setMunicipio(cregistros.getString(3));
+                    lug.setLatitud(cregistros.getString(4));
+                    lug.setLongitud(cregistros.getString(5));
+                    lug.setTipo(cregistros.getInt(6));
+                    lug.setPresupuesto(cregistros.getInt(7));
+                    lug.setComentarios(cregistros.getString(8));
+
+                    registros.add(lug);
+                } while (cregistros.moveToNext());
         }
         catch (Exception ex)
         {
@@ -82,90 +122,8 @@ public class lugaresADO extends SqliteConexLugares {
         finally {
             db.close();
         }
-        return lug;
-    }
-
-    public ArrayList<lugares> listar()
-    {
-        SqliteConex conexion = new SqliteConex(this.contexto);
-        SQLiteDatabase db = conexion.getWritableDatabase();
-
-        ArrayList<lugares> registros = new ArrayList<>();
-        Cursor cregistros = db.rawQuery("select id, nombre, departamento, municipio, latitud, longitud, tipo, presupuesto, comentarios from lugares", null);
-
-        if(cregistros.moveToFirst())
-            do {
-                lugares lug = new lugares();
-                lug.setId(cregistros.getInt(0));
-                lug.setNombre(cregistros.getString(1));
-                lug.setDepartamento(cregistros.getString(2));
-                lug.setMunicipio(cregistros.getString(3));
-                lug.setLatitud(cregistros.getString(4));
-                lug.setLongitud(cregistros.getString(5));
-                lug.setTipo(cregistros.getInt(6));
-                lug.setPresupuesto(cregistros.getInt(7));
-                lug.setComentarios(cregistros.getString(8));
-
-                registros.add(lug);
-            }while (cregistros.moveToNext());
 
         return registros;
     }
 
-    public boolean editar (lugares lug)
-    {
-        boolean editado = false;
-
-        SqliteConex conexion = new SqliteConex(this.contexto);
-        SQLiteDatabase db = conexion.getWritableDatabase();
-        try
-        {
-
-            db.execSQL("UPDATE lugares" +
-                    "   SET nombre = '" + lug.getNombre() + "'," +
-                    "       departamento = '" + lug.getDepartamento() + "'," +
-                    "       municipio = '" + lug.getMunicipio() + "'," +
-                    "       latitud = '" + lug.getLatitud() + "'," +
-                    "       longitud = '" + lug.getLongitud() + "'," +
-                    "       tipo = '" + lug.getTipo() + "'," +
-                    "       presupuesto = '" + lug.getPresupuesto() + "'" +
-                    "        comentarios = '" + lug.getComentarios() + "'" +
-                    " WHERE id = '" + String.valueOf(lug.getId()) + "'");
-            editado=true;
-
-        }
-        catch (Exception ex)
-        {
-
-        }
-        finally {
-            db.close();
-        }
-
-        return editado;
-    }
-
-    public boolean eliminar (long id)
-    {
-        boolean eliminado = false;
-
-        SqliteConex conexion = new SqliteConex(this.contexto);
-        SQLiteDatabase db = conexion.getWritableDatabase();
-
-        try
-        {
-            db.execSQL("DELETE FROM lugares\n" +
-                    "      WHERE id = '" + String.valueOf(id) + "'");
-            eliminado=true;
-        }
-        catch (Exception ex)
-        {
-
-        }
-        finally {
-            db.close();
-        }
-
-        return eliminado;
-    }
 }

@@ -10,7 +10,7 @@
         android:id="@+id/insertarLugares_txtTitulo"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/purple_200"
+        android:background="@color/white"
         android:backgroundTint="#00FBFBFB"
         android:gravity="center"
         android:text="@string/insertarLugares_txtTitulo_text"
@@ -43,40 +43,40 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="@string/insertarLugares_txtNombre_text" />
+                android:hint="@string/insertarLugares_txtNombre_text"
+                android:inputType="textPersonName" />
 
             <EditText
                 android:id="@+id/insertarLugares_txtDepto"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="@string/insertarLugares_txtDepto_text" />
+                android:hint="@string/insertarLugares_txtDepto_text"
+                android:inputType="textPersonName" />
 
             <EditText
                 android:id="@+id/insertarLugares_txtMunicipio"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="@string/insertarLugares_txtMunicipio_text" />
+                android:hint="@string/insertarLugares_txtMunicipio_text"
+                android:inputType="textPersonName" />
 
             <EditText
                 android:id="@+id/insertarLugares_txtLatitud"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="@string/insertarLugares_txtLatitud_text" />
+                android:hint="@string/insertarLugares_txtLatitud_text"
+                android:inputType="textPersonName" />
 
             <EditText
                 android:id="@+id/insertarLugares_txtLongitud"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="@string/insertarLugares_txtLongitud_text" />
+                android:hint="@string/insertarLugares_txtLongitud_text"
+                android:inputType="textPersonName" />
 
             <Spinner
                 android:id="@+id/insertarLugares_spnTipo"
@@ -95,8 +95,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="@string/insertarLugares_txtComentarios_text" />
+                android:hint="@string/insertarLugares_txtComentarios_text"
+                android:inputType="textPersonName" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

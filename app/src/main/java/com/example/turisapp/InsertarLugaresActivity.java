@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import com.example.turisapp.clases.Mensajes;
 import com.example.turisapp.clases.UsuarioADO;
 import com.example.turisapp.clases.lugaresADO;
 import com.example.turisapp.modelos.lugares;
@@ -17,35 +18,30 @@ import com.example.turisapp.modelos.usuario;
 
 public class InsertarLugaresActivity extends AppCompatActivity {
 
-    private lugares registrar=null;
+    private lugares registro = null;
     private EditText txtNombre;
     private EditText txtDepartamento;
     private EditText txtMunicipio;
     private EditText txtLatitud;
     private EditText txtLongitud;
     private Spinner spnTipo;
-    private Spinner spnPresuesto;
+    private Spinner spnPresupuesto;
     private EditText txtComentarios;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        setContentView(R.layout.activity_insertar_lugares);
 
         Button btnAtras = (Button) findViewById(R.id.insertarLugares_btnAtras);
-        btnAtras.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {onBackPressed();}
-        });
-
-        Button btnGuardad = (Button) findViewById(R.id.insertarLugares_btnGuardar);
+        Button btnGuardar = (Button) findViewById(R.id.insertarLugares_btnGuardar);
         txtNombre = (EditText) findViewById(R.id.insertarLugares_txtNombre);
-        txtDepartamento = (EditText) findViewById(R.id.insertarLugares_txtDepto);
-        txtMunicipio = (EditText) findViewById(R.id.insertarLugares_txtMunicipio);
+        txtDepartamento= (EditText) findViewById(R.id.insertarLugares_txtDepto);
+        txtMunicipio= (EditText) findViewById(R.id.insertarLugares_txtMunicipio);
         txtLatitud = (EditText) findViewById(R.id.insertarLugares_txtLatitud);
         txtLongitud = (EditText) findViewById(R.id.insertarLugares_txtLongitud);
         spnTipo = (Spinner) findViewById(R.id.insertarLugares_spnTipo);
-        spnPresuesto = (Spinner) findViewById(R.id.insertarLugares_spnPresupuesto);
+        spnPresupuesto = (Spinner) findViewById(R.id.insertarLugares_spnTipo);
         txtComentarios = (EditText) findViewById(R.id.insertarLugares_txtComentarios);
 
         Bundle parametros = getIntent().getExtras();
@@ -53,52 +49,72 @@ public class InsertarLugaresActivity extends AppCompatActivity {
             if(parametros.containsKey("id"))
             {
                 lugaresADO db = new lugaresADO(this);
-                lugares lug = db.obtenerlugar(parametros.getLong("id"));
-                this.registrar = lug;
+                lugares lug = db.obtenerLugar(parametros.getLong("id"));
+                this.registro = lug;
                 cargarDatos();
             }
 
-        btnGuardad.setOnClickListener(new View.OnClickListener() {
+        btnAtras.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-
-                String nombre = txtNombre.getText().toString();
-                String departamento = txtDepartamento.getText().toString();
-                String municipio = txtMunicipio.getText().toString();
-                String latitud = txtLatitud.getText().toString();
-                String longitud = txtLongitud.getText().toString();
-                int tipo = spnTipo.getSelectedItemPosition();
-                int presupuesto = spnPresuesto.getSelectedItemPosition();
-                String comentarios = txtComentarios.getText().toString();
-
-                lugaresADO registrar = new lugaresADO(view.getContext());
-                lugares lug = new lugares();
-                lug.setNombre(nombre);
-                lug.setDepartamento(departamento);
-                lug.setMunicipio(municipio);
-                lug.setLatitud(latitud);
-                lug.setLongitud(longitud);
-                lug.setComentarios(comentarios);
-                long idInsercion = registrar.insertar(lug);
-
-                Intent i = new Intent(view.getContext(), Formulario.class);
-                startActivity(i);
-
-            }
-
+            public void onClick(View view) {onBackPressed();}
         });
 
+       btnGuardar.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+
+               String nombre = txtNombre.getText().toString();
+               String departamento = txtDepartamento.getText().toString();
+               String municipio = txtMunicipio.getText().toString();
+               String latitud = txtLatitud.getText().toString();
+               String longitud = txtLongitud.getText().toString();
+               int tipo = spnTipo.getSelectedItemPosition();
+               int presupuesto = spnPresupuesto.getSelectedItemPosition();
+               String comentarios = txtComentarios.getText().toString();
+
+               registro.setNombre(nombre);
+               registro.setDepartamento(departamento);
+               registro.setMunicipio(municipio);
+               registro.setLatitud(latitud);
+               registro.setLongitud(longitud);
+               registro.setTipo(tipo);
+               registro.setPresupuesto(presupuesto);
+               registro.setComentarios(comentarios);
+
+               lugaresADO registro = new lugaresADO(view.getContext());
+               lugares lug = new lugares();
+               lug.setNombre(nombre);
+               lug.setDepartamento(departamento);
+               lug.setMunicipio(municipio);
+               lug.setLatitud(latitud);
+               lug.setLongitud(longitud);
+               lug.setTipo(tipo);
+               lug.setPresupuesto(presupuesto);
+               lug.setComentarios(comentarios);
+               long idInsercion = registro.insertar(lug);
+               if (idInsercion > 0)
+                   new Mensajes(view.getContext()).alerta("Registro correcto", "Sitio turístico ingresado correctamente" + String.valueOf(idInsercion));
+               else
+                   new Mensajes(view.getContext()).alerta("Error", "Ha ocurrido un error en el ingreso, por favor intente de nuevo");
+
+               Intent i = new Intent(view.getContext(), LugarResultado.class);
+               startActivity(i);
+           }
+       });
     }
+
 
     private void cargarDatos()
     {
-        this.txtNombre.setText(this.registrar.getNombre());
-        this.txtDepartamento.setText(this.registrar.getDepartamento());
-        this.txtMunicipio.setText(this.registrar.getMunicipio());
-        this.txtLatitud.setText(this.registrar.getLatitud());
-        this.txtLongitud.setText(this.registrar.getLongitud());
-        this.spnTipo.setSelection(this.registrar.getTipo());
-        this.spnPresuesto.setSelection(this.registrar.getPresupuesto());
-        this.txtComentarios.setText(this.registrar.getComentarios());
+        this.txtNombre.setText(this.registro.getNombre());
+        this.txtDepartamento.setText(this.registro.getDepartamento());
+        this.txtMunicipio.setText(this.registro.getMunicipio());
+        this.txtLatitud.setText(this.registro.getLatitud());
+        this.txtLongitud.setText(this.registro.getLongitud());
+        this.spnTipo.setSelection(this.registro.getTipo());
+        this.spnPresupuesto.setSelection(this.registro.getPresupuesto());
+        this.txtComentarios.setText(this.registro.getComentarios());
     }
+
 }
+

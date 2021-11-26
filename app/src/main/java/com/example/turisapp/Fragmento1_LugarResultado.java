@@ -9,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TwoLineListItem;
 
@@ -39,41 +38,41 @@ public class Fragmento1_LugarResultado extends Fragment {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {super.onCreate(savedInstanceState); }
+    public void onCreate(Bundle savedInstanceState) {super.onCreate(savedInstanceState);}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_fragmento1__lugar_resultado, container, false);
+        View vista = inflater.inflate(R.layout.fragment_fragmento1__lugar_resultado, container, false);
 
-
-        ListView listLugares = (ListView) v.findViewById(R.id.fragmento1_lugar_listViewResultado);
-        lugaresADO dblugares = new lugaresADO(v.getContext());
-        ArrayList<lugares> lugares = dblugares.listar();
+        ListView lstLista = (ListView) vista.findViewById(R.id.fragmento1_lugar_listViewResultado);
+        lugaresADO dbLugares = new lugaresADO(vista.getContext());
+        ArrayList<lugares> lugares =dbLugares.listar();
 
         Adapter_ListView_LugarResultado adaptador = new Adapter_ListView_LugarResultado(lugares);
 
-        listLugares.setAdapter(adaptador);
+        lstLista.setAdapter(adaptador);
 
-        listLugares.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        lstLista.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                lugares lug = new lugares();
-                TwoLineListItem vista = (TwoLineListItem) view;
+                lugares lug =new lugares();
+
+                TwoLineListItem vista =(TwoLineListItem)view;
                 int id = Integer.parseInt(vista.getContentDescription().toString());
 
-                lugaresADO lugardb = new lugaresADO(view.getContext());
-                lug = lugardb.obtenerlugar(id);
+                lugaresADO lugaresdb = new lugaresADO(view.getContext());
+                lug = lugaresdb.obtenerLugar(id);
 
-                lugarViewModel lugvm = ViewModelProviders.of(getActivity()).get(lugarViewModel.class);
-                lugvm.setLugares(lug);
+                lugarViewModel lugarvm = ViewModelProviders.of(getActivity()).get(lugarViewModel.class);
+                lugarvm.setLugares(lug);
 
             }
-
         });
 
-        return v;
+        return vista;
 
     }
 
