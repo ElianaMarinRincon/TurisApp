@@ -53,6 +53,8 @@ public class InsertarLugaresActivity extends AppCompatActivity {
             this.registro = lug;
             cargarDatos();
         }
+        else
+            this.registro = new lugares();
 
         btnAtras.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,6 +94,7 @@ public class InsertarLugaresActivity extends AppCompatActivity {
                lug.setPresupuesto(presupuesto);
                lug.setComentarios(comentarios);
                long idInsercion = registro.insertar(lug);
+               new Mensajes(view.getContext()).alerta("", String.valueOf(idInsercion));
                if (idInsercion > 0)
                    new Mensajes(view.getContext()).alerta("Registro correcto", "Sitio turístico ingresado correctamente" + String.valueOf(idInsercion));
                else

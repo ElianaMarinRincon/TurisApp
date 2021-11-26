@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import androidx.annotation.Nullable;
 
@@ -42,9 +43,9 @@ public class lugaresADO extends SqliteConexLugares {
 
             id = db.insert("lugares", null, valores);
         }
-
         catch (Exception ex)
         {
+            Log.println(Log.ERROR, "Error", ex.getMessage());
             System.out.println(ex.getMessage());
         }
 
