@@ -46,13 +46,13 @@ public class InsertarLugaresActivity extends AppCompatActivity {
 
         Bundle parametros = getIntent().getExtras();
         if(parametros!=null)
-            if(parametros.containsKey("id"))
-            {
-                lugaresADO db = new lugaresADO(this);
-                lugares lug = db.obtenerLugar(parametros.getLong("id"));
-                this.registro = lug;
-                cargarDatos();
-            }
+        if(parametros.containsKey("id"))
+        {
+            lugaresADO db = new lugaresADO(this);
+            lugares lug = db.obtenerLugar(parametros.getLong("id"));
+            this.registro = lug;
+            cargarDatos();
+        }
 
         btnAtras.setOnClickListener(new View.OnClickListener() {
             @Override

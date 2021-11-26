@@ -81,7 +81,7 @@ public class Adapter_ListView_LugarResultado implements ListAdapter {
 
     @Override
     public int getViewTypeCount() {
-        return lugares.size();
+        return (lugares.size()>0)? lugares.size() : 1;
     }
 
     @Override
