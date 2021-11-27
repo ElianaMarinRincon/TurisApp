@@ -44,11 +44,16 @@ public class Fragmento2_LugarResultado_Mapa extends Fragment {
             lugvm.getLugares().observe(getViewLifecycleOwner(), new Observer<lugares>() {
                 @Override
                 public void onChanged(lugares lugares) {
-                    LatLng sydney = new LatLng(Double.parseDouble(lugares.getLatitud()), Double.parseDouble(lugares.getLongitud()));
-                    googleMap.clear();
-                    googleMap.addMarker(new MarkerOptions().position(sydney).title("Posición"));
-                    googleMap.setMinZoomPreference(15);
-                    googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+                    try {
+                        LatLng sydney = new LatLng(Double.parseDouble(lugares.getLatitud()), Double.parseDouble(lugares.getLongitud()));
+                        googleMap.clear();
+                        googleMap.addMarker(new MarkerOptions().position(sydney).title("Posición"));
+                        googleMap.setMinZoomPreference(15);
+                        googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+
+                    }
+                    catch (Exception ex)
+                    {}
                 }
             });
 

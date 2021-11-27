@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProviders;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.example.turisapp.modelos.lugares;
@@ -54,9 +55,12 @@ public class Fragmento3_LugarResultado extends Fragment {
             @Override
             public void onChanged(lugares lugares) {
                 txtDepartamento.setText(lugares.getDepartamento());
+
+                ArrayAdapter<CharSequence> tipos  = ArrayAdapter.createFromResource(container.getContext(), R.array.opcionesTuristicas, R.layout.support_simple_spinner_dropdown_item);
+                ArrayAdapter<CharSequence> presupuestos  = ArrayAdapter.createFromResource(container.getContext(), R.array.presupuesto, R.layout.support_simple_spinner_dropdown_item);
                 txtMunicipio.setText(lugares.getMunicipio());
-                txtTipo.setText(lugares.getTipo());
-                txtPresupuesto.setText(lugares.getPresupuesto());
+                txtTipo.setText(tipos.getItem(lugares.getTipo()).toString());
+                txtPresupuesto.setText(presupuestos.getItem(lugares.getPresupuesto()).toString());
                 txtComentarios.setText(lugares.getComentarios());
             }
         });

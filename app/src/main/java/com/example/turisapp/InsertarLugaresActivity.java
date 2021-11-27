@@ -18,7 +18,7 @@ import com.example.turisapp.modelos.usuario;
 
 public class InsertarLugaresActivity extends AppCompatActivity {
 
-    private lugares registro = null;
+    private lugares registro = new lugares();
     private EditText txtNombre;
     private EditText txtDepartamento;
     private EditText txtMunicipio;
