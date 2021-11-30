@@ -71,10 +71,10 @@ public class PerfilActivity<onCreateOptionsMenu> extends AppCompatActivity {
                 FirebaseAuth autenticacion = FirebaseAuth.getInstance();
                 autenticacion.signOut();
                 onBackPressed();
-            break;
+                break;
         }
         if(i!=null)
-        startActivity(i);
+            startActivity(i);
         return super.onOptionsItemSelected(item);
 
     }
