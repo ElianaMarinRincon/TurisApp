@@ -1,20 +1,23 @@
 package com.example.turisapp;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.turisapp.clases.Mensajes;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
+import com.google.android.material.snackbar.BaseTransientBottomBar;
+import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.auth.FirebaseAuth;
 public class PerfilActivity<onCreateOptionsMenu> extends AppCompatActivity {
 
     @Override
@@ -65,8 +68,12 @@ public class PerfilActivity<onCreateOptionsMenu> extends AppCompatActivity {
                 break;
 
             case R.id.menuPpalPerfil_CerrarSesion: msj.alerta("", "Se ha cerrado sesión"); i = new Intent(this, Bienvenida.class);
-                break;
+                FirebaseAuth autenticacion = FirebaseAuth.getInstance();
+                autenticacion.signOut();
+                onBackPressed();
+            break;
         }
+        if(i!=null)
         startActivity(i);
         return super.onOptionsItemSelected(item);
 
