@@ -15,6 +15,8 @@ import com.example.turisapp.clases.UsuarioADO;
 import com.example.turisapp.clases.lugaresADO;
 import com.example.turisapp.modelos.lugares;
 import com.example.turisapp.modelos.usuario;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class InsertarLugaresActivity extends AppCompatActivity {
 
@@ -99,6 +101,12 @@ public class InsertarLugaresActivity extends AppCompatActivity {
                    new Mensajes(view.getContext()).alerta("Registro correcto", "Sitio turístico ingresado correctamente" + String.valueOf(idInsercion));
                else
                    new Mensajes(view.getContext()).alerta("Error", "Ha ocurrido un error en el ingreso, por favor intente de nuevo");
+
+
+               // Write a message to the database
+               FirebaseDatabase database = FirebaseDatabase.getInstance();
+               database.getReference().child("Lugar").child(String.valueOf(lug.getId())).setValue(lug);
+
 
                Intent i = new Intent(view.getContext(), LugarResultado.class);
                startActivity(i);

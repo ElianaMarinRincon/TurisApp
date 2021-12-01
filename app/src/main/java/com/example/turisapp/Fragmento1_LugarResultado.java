@@ -16,6 +16,7 @@ import com.example.turisapp.adapters.Adapter_ListView_LugarResultado;
 import com.example.turisapp.clases.lugaresADO;
 import com.example.turisapp.modelos.lugares;
 import com.example.turisapp.viewmodels.lugarViewModel;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 import java.util.ArrayList;
@@ -45,6 +46,13 @@ public class Fragmento1_LugarResultado extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View vista = inflater.inflate(R.layout.fragment_fragmento1__lugar_resultado, container, false);
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        try{
+            database.setPersistenceEnabled(true);
+        }
+        catch (Exception ex)
+        {}
 
         ListView lstLista = (ListView) vista.findViewById(R.id.fragmento1_lugar_listViewResultado);
         lugaresADO dbLugares = new lugaresADO(vista.getContext());

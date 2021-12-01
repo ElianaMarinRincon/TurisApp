@@ -55,6 +55,7 @@ public class LoginActivity extends AppCompatActivity {
         txtClave = (EditText) findViewById(R.id.login_txtClave);
         Button btnAcceder = (Button) findViewById(R.id.login_btnIngreso);
         Button btnRegistro = (Button) findViewById(R.id.login_btnRegistro);
+        Button btnRegistrarLugares = (Button) findViewById(R.id.login_btnRegistrarLugares);
         ImageButton btnGoogle = (ImageButton) findViewById(R.id.login_btnGoogle);
 
         btnRegistro.setOnClickListener(new View.OnClickListener() {
@@ -110,6 +111,14 @@ public class LoginActivity extends AppCompatActivity {
                                 }
                             });
                 }
+            }
+        });
+
+        btnRegistrarLugares.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(view.getContext(), InsertarLugaresActivity.class);
+                startActivity(i);
             }
         });
 
